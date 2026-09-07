@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #262626;
+  color: #d9d9d9;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header {
+  text-align: center;
+}
+header > h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f9f4da;
+}
+header > p {
+  font-size: 0.857rem;
+  max-width: 350px;
+  color: #8e8e8e;
+}
+section.status-bar {
+  margin-block: 30px;
+  color: #f9f4da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  min-height: 60px;
+  width: 100%;
+  max-width: 350px;
+}
+section.status-bar.lost {
+  background-color: #ba2a2a;
+}
+section.status-bar.won {
+  background-color: #10a95b;
+}
+section.status-bar.farewell {
+  background-color: #7a5ea7;
+  border: 1px dashed #323232;
+}
+section.status-bar > h2 {
+  font-size: 1.25rem;
+  margin: 5px;
+}
+section.status-bar > p.farewell-message {
+  font-style: italic;
+  font-weight: 400;
+}
+section.status-bar > p {
+  margin: 5px;
+}
+section.language-chips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 350px;
+  gap: 5px;
+}
+span.chip {
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+span.chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.letters-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  margin-top: 30px;
+}
+.letters {
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  color: #f9f4da;
+  border-bottom: 1px solid #f9f4da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+}
+section.letters-wrap > span.missed-letters {
+  color: #ec5d49;
+}
+.keyboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+  max-width: 430px;
+  margin-top: 50px;
+}
+section.keyboard > button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #d7d7d7;
+  background-color: #fcba29;
+}
+section.keyboard > button.correct {
+  background-color: #10a95b;
+}
+section.keyboard > button.wrong {
+  background-color: #ec5d49;
+}
+section.keyboard > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.refresh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.refresh-btn {
+  display: flex;
+  justify-content: center;
+  background-color: #11b5e5;
+  width: 230px;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: react(0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
